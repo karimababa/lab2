@@ -5,27 +5,29 @@
 <body>
 
 <h1>
-    Welcome to our SQL database. 
+    Welcome to our Contacts database! 
     <img src="web-development-computer-icon.png" height=100 width=100 align=right><br>
 </h1>
 <h2>Choose an option below. </h2>
-<h4>You can insert content<br>
+<h4>You can insert a new contact<br>
     <form action="insert.php" method="post">
-        Title: <input type="text" name="article_title"/>
-        Content: <input type="text" name="article_content"/><br>
+        Name: <input type="text" name="Name"/><br><br>
+        Job Title: <input type="text" name="Job"/><br><br>
+        Phone Number: <input type="number" name="Phone"/><br>
     <input type="submit" />
     <br>
     </form>
     
-    update or delete the available content.
+    Update, or Delete the available content.
     <br>
     
 </h4>
     
 <table style="width=80%" border ="1">
     <tr>
-        <th>Article Title </th>
-        <th>Article Content </th>
+        <th>Contact Name </th>
+        <th>Job Title </th>
+        <th>Phone Number </th>
     </tr>
     <?php
 
@@ -33,7 +35,7 @@
     $host		=	'localhost';
     $user		=	'root';
     $pass		=	'';	
-    $database	=	'roscripts';
+    $database	=	'myDB';
     
     
     // connect to the mysql database server.
@@ -42,7 +44,7 @@
     if ( $connect )
     {
         mysql_select_db ( $database, $connect );
-        $sql = "SELECT * FROM articles";
+        $sql = "SELECT * FROM contacts";
         
         if ( @mysql_query ( $sql) )
         {
@@ -52,10 +54,11 @@
             do {
                 ?>
                 <tr>
-                    <td><?php echo $row['article_title'];?></td>
-                    <td><?php echo $row['article_content'];?></td>
-                    <td><a href="formUpdate.php?ID=<?php echo $row['ID']?>"> Update </a></td>
-                    <td><a href="delete.php?ID=<?php echo $row['ID']?>"> Delete </a></td>
+                    <td><?php echo $row['Name'];?></td>
+                    <td><?php echo $row['Job'];?></td>
+                    <td><?php echo $row['Phone'];?></td>
+                    <td><a href="formUpdate.php?Phone=<?php echo $row['Phone']?>"> Update </a></td>
+                    <td><a href="delete.php?Phone=<?php echo $row['Phone']?>"> Delete </a></td>
                 </tr>
                 
             <?php

@@ -3,11 +3,11 @@
 
 <?php
 
-	// set your infomation.
+	// set your infomJobtion.
 	$host		=	'localhost';
 	$user		=	'root';
 	$pass		=	'';	
-	$database	=	'roscripts';
+	$database	=	'myDB';
 	
 	
 	// connect to the mysql database server.
@@ -17,7 +17,7 @@
 	{
 		mysql_select_db ( $database, $connect );
 
-		$query="DELETE FROM articles WHERE (ID='$_GET[ID]')";
+		$query="DELETE FROM contacts WHERE (Phone='$_GET[Phone]')";
 
 		
 		if ( @mysql_query ( $query ) )

@@ -7,7 +7,7 @@
 	$host		=	'localhost';
 	$user		=	'root';
 	$pass		=	'';	
-	$database	=	'roscripts';
+	$database	=	'myDB';
 	
 	
 	// connect to the mysql database server.
@@ -17,9 +17,9 @@
 	{
 		mysql_select_db ( $database, $connect );
 
-		$query="INSERT INTO articles (article_title, article_content)
+		$query="INSERT INTO contacts (Phone, Name, Job)
 			VALUES
-			('$_POST[article_title]','$_POST[article_content]')";
+			('$_POST[Phone]','$_POST[Name]','$_POST[Job]')";
 
 		
 		if ( @mysql_query ( $query ) )

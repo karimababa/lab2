@@ -7,13 +7,13 @@ Test2
 	$host		=	'localhost';
 	$user		=	'root';
 	$pass		=	'';	
-	$database	=	'roscripts';
+	$database	=	'myDB';
 	
-	$sql = 'CREATE TABLE `articles` (
-		`ID` int( 11 ) NOT NULL AUTO_INCREMENT,
-		`article_title` VARCHAR( 255 ) NOT NULL,
-		`article_content` TEXT NOT NULL,
-		PRIMARY KEY ( `ID` )
+	$sql = 'CREATE TABLE `contacts` (
+		`Phone` int( 11 ) NOT NULL,
+		`Name` VARCHAR( 255 ) NOT NULL,
+		`Job` TEXT NOT NULL,
+		PRIMARY KEY ( `Phone` )
 	       )';
 
 	// connect to the mysql database server.

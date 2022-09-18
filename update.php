@@ -7,7 +7,7 @@
 	$host		=	'localhost';
 	$user		=	'root';
 	$pass		=	'';	
-	$database	=	'roscripts';
+	$database	=	'myDB';
 	
 	
 	// connect to the mysql database server.
@@ -17,11 +17,11 @@
 	{
 		mysql_select_db ( $database, $connect );
 
-        $query = "UPDATE articles 
+        $query = "UPDATE contacts 
         SET
-        article_title='$_POST[article_title]',
-		article_content='$_POST[article_content]'
-		WHERE ID='$_POST[ID]'";
+        Name='$_POST[Name]',
+		Job='$_POST[Job]'
+		WHERE Phone='$_POST[Phone]'";
         
 		if ( @mysql_query ( $query ) )
         {

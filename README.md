@@ -1,17 +1,18 @@
- lab2
+ Lab2
+ EECE 438
  Karima Taha El Baba
  202001602
- I first decided to remove the formInsert.html, and create 1 home page
- I kept the query as it is, I thought it was not so important what content
- the database was going to have, whether for a school, employees, 
- customers, or just plain old articles.
- I added the table so that whoever is using the website can take 
- a look at what already exists in the query, and decide accordingly
- whether they would like to add a new item, delete an existing item, 
- or update an existing item.
- I then thought the update should have its own page where they could view
- in details everything about the entry they are about to edit.
- I had some trouble with the edit that I could not find.
- I spent three hours looking for what the problem is only to find out 
- that I added '' in a place where I shouldn't have :(
+
+ I first decided to remove the formInsert.html, and create 1 home page.
+ 
+ I created a new database instead of roscripts, called myDB. 
+
+ I then created using the create.php file, a new table and called it contacts. This table will contain the names, jobs and phone numbers of people. I assigned the phone numbers as a primary key, seeing as it is the only unique thing people own. 
+ 
+ In the home page I created, you are able to access all of the information on this table. 
+
+ I added the table to the home page so that whoever is using the website can take a look at what already exists in the query, and decide accordingly whether they would like to add a new contact, delete an existing contact, or update an existing contact. 
+ 
+ I then thought the update should have its own page where they could view in details everything about the contact they are about to edit.
+
  The last thing I did was add some design and color to the page.

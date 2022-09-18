@@ -1,15 +1,15 @@
 <html>
 <head>
-   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="styleshome.css">
 </head>
 <body>
 
 
 <h1>
-    Welcome to our SQL database. 
-    <img src="web-development-computer-icon.png" height=100 width=100 align=right><br>
 
     Update Entry Page
+    <img src="web-development-computer-icon.png" height=100 width=100 align=right><br>
+
 </h1>
 <h3>
     You have chosen to update the following entry:
@@ -20,7 +20,7 @@
     $host		=	'localhost';
     $user		=	'root';
     $pass		=	'';	
-    $database	=	'roscripts';
+    $database	=	'myDB';
     
     
     // connect to the mysql database server.
@@ -29,7 +29,7 @@
     if ( $connect )
     {
         mysql_select_db ( $database, $connect );
-        $sql = "SELECT * FROM articles WHERE (ID='$_GET[ID]')";
+        $sql = "SELECT * FROM contacts WHERE (Phone='$_GET[Phone]')";
         
         if ( @mysql_query ( $sql) )
         {
@@ -40,17 +40,17 @@
             do{
                 ?>
                 <h3>   
-                    <form action="update.php?ID=id" method="post">
+                    <form action="update.php?Phone=Phone" method="post">
                         
-                        ID: <?php echo $row['ID'];?> <input type="number" hidden value=<?php echo $row['ID'];?> name="ID"/>
+                        Phone: <?php echo $row['Phone'];?> <input type="number" hidden value=<?php echo $row['Phone'];?> name="Phone"/>
                         <br><br>
-                        Title: <?php echo $row['article_title'];?>
+                        Name: <?php echo $row['Name'];?>
                         <br><br>
-                        Content: <?php echo $row['article_content'];?>
+                        Job Title: <?php echo $row['Job'];?>
                         <br><br>
-                        Enter New Title: <input type="text" name="article_title"/>
+                        Enter New Name: <input type="text" name="Name"/>
                         <br><br>
-                        Enter New Content: <input type="text" name="article_content"/><br>
+                        Enter New Job Title: <input type="text" name="Job"/><br>
                         <br>
                     <input type="submit" />
 
