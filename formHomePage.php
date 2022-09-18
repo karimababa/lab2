@@ -4,7 +4,6 @@
 </head>
 <body>
 
-
 <h1>
     Welcome to our SQL database. 
     <img src="web-development-computer-icon.png" height=100 width=100 align=right><br>
@@ -23,7 +22,6 @@
     
 </h4>
     
-
 <table style="width=80%" border ="1">
     <tr>
         <th>Article Title </th>

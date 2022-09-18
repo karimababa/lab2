@@ -19,8 +19,8 @@
 
         $query = "UPDATE articles 
         SET
-        'article_title'='$_POST[article_title]',
-		'article_content'='$_POST[article_content]'
+        article_title='$_POST[article_title]',
+		article_content='$_POST[article_content]'
 		WHERE ID='$_POST[ID]'";
         
 		if ( @mysql_query ( $query ) )
