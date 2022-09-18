@@ -16,3 +16,14 @@
  I then thought the update should have its own page where they could view in details everything about the contact they are about to edit.
 
  The last thing I did was add some design and color to the page.
+ 
+ 
+ 
+ 
+ 
+ Guide:
+ 
+ Step 1: Once you start the wampserver, you should first open localhost/create.php to create the database locally. 
+ Step 2: open localhost/formHomePage.php and there you will find an 'add a new contact' form, and you can see what's already in the database (which in this stage should be empty) and choose whether to update or delete these existing entries.
+ Step 3: After having already added some entry/entries, press the 'delete' button to delete an entry and test the delete function. Once you submit this go back to the home page to make sure of the change.
+ Step 4: The last step is to choose an entry and press the update button. In this stage you will be taken to the formUpdate.php page where you will see information on the entry you have chosen to update, and enter the new info you wish to add/change. Once you submit this go back to the home page to make sure of the change.
